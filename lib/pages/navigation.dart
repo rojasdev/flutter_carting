@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
+import 'map.dart';
 import 'notification.dart';
 import 'message.dart';
 import 'alarm.dart';
-import 'destination.dart';
+import 'stats.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({super.key});
@@ -48,6 +49,16 @@ class _NavigationPageState extends State<NavigationPage> {
           ),
           NavigationDestination(
             icon: Badge(
+              label: Text('2'),
+              child: Icon(
+                Icons.graphic_eq_sharp,
+                color: Color.fromARGB(255, 206, 203, 203),
+              ),
+            ),
+            label: 'Statistics',
+          ),
+          NavigationDestination(
+            icon: Badge(
                 label: Text('25'),
                 child: Icon(
                   Icons.alarm_sharp,
@@ -78,10 +89,10 @@ class _NavigationPageState extends State<NavigationPage> {
       body: <Widget>[
         /// Home page
         const HomePage(),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(40, 20, 40, 20),
-          child: SimpleTimeSeriesChart.withSampleData(),
-        ),
+
+        const MapPage(),
+
+        const StatPage(),
 
         const AlarmPage(),
 
