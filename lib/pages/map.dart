@@ -19,7 +19,17 @@ class MapPage extends StatelessWidget {
             ),
             children: [
               TileLayer(
-                urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                urlTemplate:
+                    'https://tile-{s}.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+                //urlTemplate:
+                // 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+                //urlTemplate:
+                //  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                subdomains: const [
+                  'a',
+                  'b',
+                  'c'
+                ], // Subdomains for load balancing
                 userAgentPackageName: 'com.example.app',
               ),
               CircleLayer(
