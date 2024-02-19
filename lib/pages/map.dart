@@ -37,10 +37,68 @@ class MapPage extends StatelessWidget {
               const MarkerLayer(
                 markers: [
                   Marker(
-                    point: LatLng(10.6713, 122.9511),
-                    width: 80,
-                    height: 80,
-                    child: FlutterLogo(),
+                    point: LatLng(10.679, 122.962),
+                    width: 40,
+                    height: 40,
+                    child: Icon(Icons.location_pin),
+                  ),
+                ],
+              ),
+              PolygonLayer(
+                polygonCulling: false,
+                polygons: [
+                  Polygon(
+                      points: [
+                        const LatLng(10.682888, 122.957688),
+                        const LatLng(10.684086, 122.960911),
+                        const LatLng(10.680705, 122.962649),
+                        const LatLng(10.679187, 122.959511),
+                      ],
+                      color: Colors.blue.withOpacity(0.5),
+                      borderStrokeWidth: 2,
+                      borderColor: Colors.blue,
+                      isFilled: true),
+                ],
+              ),
+              PolylineLayer(
+                polylines: [
+                  Polyline(
+                    points: [
+                      const LatLng(10.668328, 122.958444),
+                      const LatLng(10.674155, 122.961091),
+                      const LatLng(10.675039, 122.961242),
+                      const LatLng(10.675847, 122.961027),
+                      const LatLng(10.683639, 122.957072),
+                      const LatLng(10.683985, 122.956504),
+                    ],
+                    color: Colors.green,
+                    strokeWidth: 4,
+                  ),
+                ],
+              ),
+              const MarkerLayer(
+                markers: [
+                  Marker(
+                    point: LatLng(10.668328, 122.958444),
+                    width: 60,
+                    height: 60,
+                    child: Icon(
+                      Icons.flag,
+                      color: Color.fromARGB(255, 34, 224, 40),
+                    ),
+                  ),
+                ],
+              ),
+              const MarkerLayer(
+                markers: [
+                  Marker(
+                    point: LatLng(10.683985, 122.956504),
+                    width: 60,
+                    height: 60,
+                    child: Icon(
+                      Icons.flag,
+                      color: Color.fromARGB(255, 224, 34, 34),
+                    ),
                   ),
                 ],
               ),
