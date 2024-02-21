@@ -5,6 +5,7 @@ import 'notification.dart';
 import 'message.dart';
 import 'alarm.dart';
 import 'stats.dart';
+import 'buttons.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({super.key});
@@ -84,6 +85,16 @@ class _NavigationPageState extends State<NavigationPage> {
             ),
             label: 'Messages',
           ),
+          NavigationDestination(
+            icon: Badge(
+              label: Text('2'),
+              child: Icon(
+                Icons.switch_access_shortcut,
+                color: Color.fromARGB(255, 206, 203, 203),
+              ),
+            ),
+            label: 'Buttons',
+          ),
         ],
       ),
       body: <Widget>[
@@ -101,6 +112,9 @@ class _NavigationPageState extends State<NavigationPage> {
 
         /// Messages page
         const MessagePage(),
+
+        /// Button page
+        ButtonPage(),
       ][currentPageIndex],
     );
   }

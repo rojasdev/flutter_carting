@@ -14,7 +14,7 @@ class MapPage extends StatelessWidget {
         child: Center(
           child: FlutterMap(
             options: const MapOptions(
-              center: LatLng(10.6713, 122.9511),
+              center: LatLng(10.683082, 122.966510),
               zoom: 14.2,
             ),
             children: [
@@ -22,8 +22,8 @@ class MapPage extends StatelessWidget {
                 urlTemplate:
                     'https://tile-{s}.openstreetmap.fr/hot/{z}/{x}/{y}.png',
                 //urlTemplate:
-                // 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
-                //urlTemplate:
+                //    'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+                // urlTemplate:
                 //  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 subdomains: const [
                   'a',
@@ -35,7 +35,8 @@ class MapPage extends StatelessWidget {
               CircleLayer(
                 circles: [
                   CircleMarker(
-                    point: const LatLng(10.6713, 122.9511), // center of 't Gooi
+                    point: const LatLng(
+                        10.667177, 122.961227), // center of 't Gooi
                     radius: 1000,
                     useRadiusInMeter: true,
                     color: Colors.red.withOpacity(0.3),
