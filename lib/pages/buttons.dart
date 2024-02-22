@@ -3,11 +3,11 @@ import 'package:group_button/group_button.dart';
 
 // ignore: must_be_immutable
 class ButtonPage extends StatelessWidget {
-  ButtonPage({super.key});
+  const ButtonPage({super.key});
   //final controller = GroupButtonController();
-  final buttons = ['10:00', '11:00', '12:00'];
-  final List<String> options = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
-  List<String> selectedOptions = [];
+  // final buttons = ['10:00', '11:00', '12:00'];
+  //final List<String> options = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
+  //List<String> selectedOptions = [];
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class ButtonPage extends StatelessWidget {
       margin: EdgeInsets.all(8.0),
       child: SizedBox.expand(
         child: GroupButton(
-          isRadio: true, // change to false if acts like checkbox
+          isRadio: false, // change to false if acts like checkbox
           //onSelected: ,// add action here
           buttons: [
             "12:00",
