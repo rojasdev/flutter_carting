@@ -114,7 +114,7 @@ class _NavigationPageState extends State<NavigationPage> {
         const MessagePage(),
 
         /// Button page
-        ButtonPage(),
+        const ButtonPage(),
       ][currentPageIndex],
     );
   }
