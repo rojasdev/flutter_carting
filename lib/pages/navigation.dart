@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
-import 'map.dart';
-import 'notification.dart';
-import 'message.dart';
-import 'alarm.dart';
-import 'stats.dart';
-import 'buttons.dart';
+import 'todo.dart';
+import 'view.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({super.key});
@@ -42,58 +38,21 @@ class _NavigationPageState extends State<NavigationPage> {
             icon: Badge(
               label: Text('2'),
               child: Icon(
-                Icons.map_sharp,
+                Icons.list,
                 color: Color.fromARGB(255, 206, 203, 203),
               ),
             ),
-            label: 'Destinations',
+            label: 'List One',
           ),
           NavigationDestination(
             icon: Badge(
               label: Text('2'),
               child: Icon(
-                Icons.graphic_eq_sharp,
+                Icons.list,
                 color: Color.fromARGB(255, 206, 203, 203),
               ),
             ),
-            label: 'Statistics',
-          ),
-          NavigationDestination(
-            icon: Badge(
-                label: Text('25'),
-                child: Icon(
-                  Icons.alarm_sharp,
-                  color: Color.fromARGB(255, 206, 203, 203),
-                )),
-            label: 'Alarm',
-          ),
-          NavigationDestination(
-            icon: Badge(
-                child: Icon(
-              Icons.notifications_sharp,
-              color: Color.fromARGB(255, 206, 203, 203),
-            )),
-            label: 'Notifications',
-          ),
-          NavigationDestination(
-            icon: Badge(
-              label: Text('2'),
-              child: Icon(
-                Icons.messenger_sharp,
-                color: Color.fromARGB(255, 206, 203, 203),
-              ),
-            ),
-            label: 'Messages',
-          ),
-          NavigationDestination(
-            icon: Badge(
-              label: Text('2'),
-              child: Icon(
-                Icons.switch_access_shortcut,
-                color: Color.fromARGB(255, 206, 203, 203),
-              ),
-            ),
-            label: 'Buttons',
+            label: 'List Two',
           ),
         ],
       ),
@@ -101,20 +60,9 @@ class _NavigationPageState extends State<NavigationPage> {
         /// Home page
         const HomePage(),
 
-        const MapPage(),
+        const TodoPage(),
 
-        const StatPage(),
-
-        const AlarmPage(),
-
-        // Notification Page
-        const NotificationPage(),
-
-        /// Messages page
-        const MessagePage(),
-
-        /// Button page
-        const ButtonPage(),
+        const ViewPage(),
       ][currentPageIndex],
     );
   }
