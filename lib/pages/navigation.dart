@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'home.dart';
 import 'todo.dart';
 import 'view.dart';
+import 'employee.dart';
+import 'quiz.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({super.key});
@@ -52,7 +54,27 @@ class _NavigationPageState extends State<NavigationPage> {
                 color: Color.fromARGB(255, 206, 203, 203),
               ),
             ),
-            label: 'List Two',
+            label: 'Cart',
+          ),
+          NavigationDestination(
+            icon: Badge(
+              label: Text(''),
+              child: Icon(
+                Icons.list,
+                color: Color.fromARGB(255, 206, 203, 203),
+              ),
+            ),
+            label: 'JSON Driven',
+          ),
+          NavigationDestination(
+            icon: Badge(
+              label: Text(''),
+              child: Icon(
+                Icons.quiz,
+                color: Color.fromARGB(255, 206, 203, 203),
+              ),
+            ),
+            label: 'JSON Local',
           ),
         ],
       ),
@@ -63,6 +85,10 @@ class _NavigationPageState extends State<NavigationPage> {
         const TodoPage(),
 
         const ViewPage(),
+
+        const EmployeePage(),
+
+        const QuizPage(),
       ][currentPageIndex],
     );
   }
