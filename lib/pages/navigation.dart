@@ -5,6 +5,7 @@ import 'view.dart';
 import 'employee.dart';
 import 'quiz.dart';
 import 'return.dart';
+import 'map.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({super.key});
@@ -87,6 +88,16 @@ class _NavigationPageState extends State<NavigationPage> {
             ),
             label: 'Data Return',
           ),
+          NavigationDestination(
+            icon: Badge(
+              label: Text(''),
+              child: Icon(
+                Icons.select_all,
+                color: Color.fromARGB(255, 206, 203, 203),
+              ),
+            ),
+            label: 'Map JSON',
+          ),
         ],
       ),
       body: <Widget>[
@@ -102,6 +113,8 @@ class _NavigationPageState extends State<NavigationPage> {
         const QuizPage(),
 
         const ReturnScreen(),
+
+        const MapPage(),
       ][currentPageIndex],
     );
   }

@@ -1,0 +1,12 @@
+{
+    "locations": {
+        "route1": [
+            {"latitude": 10.668328, "longitude": 122.958444, "title": "Marker 1"},
+            {"latitude": 10.674155, "longitude": 122.961091, "title": "Marker 2"},
+            {"latitude": 10.675039, "longitude": 122.961242, "title": "Marker 3"},
+            {"latitude": 10.675847, "longitude": 122.961027, "title": "Marker 4"},
+            {"latitude": 10.683639, "longitude": 122.957072, "title": "Marker 5"},
+            {"latitude": 10.683985, "longitude": 122.956504, "title": "Marker 6"}
+            ]
+        } 
+}
